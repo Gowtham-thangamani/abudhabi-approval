@@ -1,0 +1,7 @@
+# robots.txt for www.abudhabi-approval.com
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /Version/
+
+Sitemap: https://www.abudhabi-approval.com/sitemap.xml

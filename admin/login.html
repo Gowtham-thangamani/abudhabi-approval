@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PS9B6M0DWP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PS9B6M0DWP');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="description" content="Admin Login for Abu Dhabi Approval management system." />
+    <meta name="author" content="Abu Dhabi Approvals" />
+    <title>Admin Login | Abu Dhabi Approval</title>
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary-gold: #F5BF23; 
+            --primary-brown: #663300; 
+            --text-dark: #333;
+            --text-muted: #666;
+            --bg-light: #f8f9fa;
+            --white: #fff;
+            --success: #10b981;
+            --error: #ef4444;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            min-height: 100vh; 
+            display: flex;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+        }
+        .login-container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+        }
+        .login-image {
+            flex: 1;
+            background: url('../images/main-slider/slider1/slide1.jpg') center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem;
+        }
+        .login-image::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%);
+        }
+        .login-image-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+        }
+        .login-image-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .login-image-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 400px;
+        }
+        .login-form-container {
+            width: 480px;
+            min-width: 400px;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+            box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        }
+        .login-header { margin-bottom: 2.5rem; }
+        .logo { margin-bottom: 2rem; }
+        .logo img { max-height: 60px; }
+        .login-title { 
+            font-size: 1.75rem; 
+            color: var(--text-dark); 
+            font-weight: 600; 
+            margin-bottom: 0.5rem; 
+        }
+        .login-subtitle { color: var(--text-muted); font-size: 0.95rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label { 
+            display: block; 
+            margin-bottom: 0.5rem; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            color: var(--text-dark); 
+        }
+        .form-input { 
+            width: 100%; 
+            padding: 1rem 1.25rem; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 10px; 
+            background: var(--bg-light); 
+            color: var(--text-dark); 
+            font-family: 'Poppins', sans-serif; 
+            font-size: 1rem; 
+            transition: all 0.3s; 
+        }
+        .form-input:focus { 
+            outline: none; 
+            border-color: var(--primary-gold); 
+            background: var(--white);
+            box-shadow: 0 0 0 4px rgba(245,191,35,0.1); 
+        }
+        .form-input::placeholder { color: #999; }
+        .form-checkbox { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; font-size: 0.9rem; color: var(--text-dark); }
+        .form-checkbox input { width: 18px; height: 18px; accent-color: var(--primary-gold); }
+        .btn { 
+            width: 100%; 
+            padding: 1rem; 
+            border: none; 
+            border-radius: 10px; 
+            font-weight: 600; 
+            font-size: 1rem; 
+            cursor: pointer; 
+            transition: all 0.3s; 
+            font-family: 'Poppins', sans-serif; 
+        }
+        .btn-primary { 
+            background: var(--primary-gold); 
+            color: var(--text-dark); 
+        }
+        .btn-primary:hover { 
+            background: #e0a800;
+            transform: translateY(-2px); 
+            box-shadow: 0 6px 20px rgba(245, 191, 35, 0.4); 
+        }
+        .btn-secondary { 
+            background: var(--bg-light); 
+            color: var(--text-dark); 
+            border: 2px solid #e0e0e0; 
+            margin-top: 1rem; 
+        }
+        .btn-secondary:hover { border-color: var(--primary-gold); }
+        .alert { padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.9rem; }
+        .alert-error { background: rgba(239, 68, 68, 0.1); color: #dc2626; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .alert-success { background: rgba(16, 185, 129, 0.1); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .form-footer { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+        .forgot-link { color: var(--primary-gold); text-decoration: none; font-size: 0.9rem; font-weight: 500; }
+        .forgot-link:hover { text-decoration: underline; }
+        .view-toggle { display: none; }
+        .view-toggle.active { display: block; }
+        .back-link { display: block; text-align: center; margin-top: 1.5rem; color: var(--text-muted); text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { color: var(--primary-gold); }
+        .divider { display: flex; align-items: center; margin: 1.5rem 0; color: var(--text-muted); font-size: 0.85rem; }
+        .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #e0e0e0; }
+        .divider span { padding: 0 1rem; }
+        @media(max-width:900px) {
+            .login-image { display: none; }
+            .login-form-container { width: 100%; min-width: auto; max-width: 450px; margin: auto; }
+        }
+    </style>
+    <link rel="canonical" href="https://www.abudhabi-approval.com/admin/login.html" />
+    <!-- Admin Login Page Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Admin Login - Abu Dhabi Approval",
+        "description": "Admin Login for Abu Dhabi Approval management system",
+        "url": "https://www.abudhabi-approval.com/admin/login.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Abu Dhabi Approval",
+            "url": "https://www.abudhabi-approval.com"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-image">
+            <div class="login-image-content">
+                <h2>Abu Dhabi Approval</h2>
+                <p>Streamline your approval process in Abu Dhabi. Navigate the complexities of obtaining approvals with ease.</p>
+            </div>
+        </div>
+        
+        <div class="login-form-container">
+            <!-- Login Form -->
+            <div class="view-toggle active" id="login-view">
+                <div class="login-header">
+                    <div class="logo"><img src="../images/logo-dark.png" alt="Abu Dhabi Approval"></div>
+                    <h1 class="login-title">Welcome Back</h1>
+                    <p class="login-subtitle">Sign in to manage your approval services</p>
+                </div>
+                <div id="login-alert"></div>
+                <form id="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label class="form-label">Username or Email</label>
+                        <input type="text" class="form-input" id="login-username" placeholder="Enter your username or email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" id="login-password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-footer">
+                        <label class="form-checkbox"><input type="checkbox" id="remember"><span>Remember me</span></label>
+                        <a href="#" class="forgot-link" onclick="showResetView(); return false;">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </form>
+                <a href="../index.html" class="back-link">← Back to Website</a>
+            </div>
+            
+            <!-- Password Reset Form -->
+            <div class="view-toggle" id="reset-view">
+                <div class="login-header">
+                    <div class="logo"><img src="../images/logo-dark.png" alt="Abu Dhabi Approval"></div>
+                    <h1 class="login-title">Reset Password</h1>
+                    <p class="login-subtitle">Enter your details to reset your password</p>
+                </div>
+                <div id="reset-alert"></div>
+                <form id="reset-form" onsubmit="handleReset(event)">
+                    <div class="form-group"><label class="form-label">Username</label><input type="text" class="form-input" id="reset-username" placeholder="Enter your username" required></div>
+                    <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="reset-email" placeholder="Enter your registered email" required></div>
+                    <div class="form-group"><label class="form-label">New Password</label><input type="password" class="form-input" id="reset-new-password" placeholder="Min 8 characters" required minlength="8"></div>
+                    <div class="form-group"><label class="form-label">Confirm Password</label><input type="password" class="form-input" id="reset-confirm-password" placeholder="Confirm new password" required></div>
+                    <button type="submit" class="btn btn-primary">Reset Password</button>
+                    <button type="button" class="btn btn-secondary" onclick="showLoginView()">← Back to Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const session = localStorage.getItem('adaAdminSession') || sessionStorage.getItem('adaAdminSession');
+            if (session) { try { const d = JSON.parse(session); if (new Date() < new Date(d.expiresAt)) window.location.href = 'dashboard.html'; } catch (e) {} }
+        })();
+
+        function initializeData() {
+            let users = JSON.parse(localStorage.getItem('adaUsers')) || [];
+            if (users.length === 0) {
+                users = [{ 
+                    id: 'user_admin', 
+                    username: 'admin', 
+                    email: 'admin@abudhabi-approval.com', 
+                    fullName: 'Administrator', 
+                    password: 'admin123', 
+                    role: 'admin', 
+                    status: 'active', 
+                    permissions: { 
+                        blogs: { create: true, read: true, update: true, delete: true },
+                        services: { create: true, read: true, update: true, delete: true },
+                        testimonials: { create: true, read: true, update: true, delete: true },
+                        contacts: { read: true, delete: true },
+                        subscribers: { read: true, delete: true },
+                        users: { create: true, read: true, update: true, delete: true },
+                        settings: { read: true, update: true },
+                        analytics: { read: true }
+                    },
+                    createdAt: new Date().toISOString(), 
+                    lastLogin: null 
+                }];
+                localStorage.setItem('adaUsers', JSON.stringify(users));
+            }
+            return users;
+        }
+        let users = initializeData();
+
+        function showAlert(id, msg, type = 'error') { document.getElementById(id).innerHTML = `<div class="alert alert-${type}">${msg}</div>`; }
+        function showLoginView() { document.getElementById('login-view').classList.add('active'); document.getElementById('reset-view').classList.remove('active'); }
+        function showResetView() { document.getElementById('login-view').classList.remove('active'); document.getElementById('reset-view').classList.add('active'); }
+
+        let loginAttempts = JSON.parse(localStorage.getItem('adaLoginAttempts')) || {count: 0, lockUntil: null};
+
+        function handleLogin(e) {
+            e.preventDefault();
+            if (loginAttempts.lockUntil && new Date() < new Date(loginAttempts.lockUntil)) { 
+                const mins = Math.ceil((new Date(loginAttempts.lockUntil) - new Date()) / 60000);
+                showAlert('login-alert', `Too many attempts. Try again in ${mins} minutes.`); 
+                return; 
+            }
+            const usernameInput = document.getElementById('login-username').value.trim().toLowerCase();
+            const password = document.getElementById('login-password').value;
+            const remember = document.getElementById('remember').checked;
+            users = JSON.parse(localStorage.getItem('adaUsers')) || [];
+            const user = users.find(u => (u.username.toLowerCase() === usernameInput || u.email.toLowerCase() === usernameInput) && u.password === password);
+            if (!user) { 
+                loginAttempts.count++; 
+                if (loginAttempts.count >= 5) { 
+                    loginAttempts.lockUntil = new Date(Date.now() + 15 * 60 * 1000).toISOString(); 
+                    loginAttempts.count = 0; 
+                } 
+                localStorage.setItem('adaLoginAttempts', JSON.stringify(loginAttempts)); 
+                showAlert('login-alert', `Invalid credentials. ${5 - loginAttempts.count} attempts remaining.`); 
+                return; 
+            }
+            if (user.status === 'inactive') { showAlert('login-alert', 'Account inactive. Contact administrator.'); return; }
+            
+            loginAttempts = { count: 0, lockUntil: null }; 
+            localStorage.setItem('adaLoginAttempts', JSON.stringify(loginAttempts));
+            
+            // Update last login and log activity
+            const userIdx = users.findIndex(u => u.id === user.id); 
+            if (userIdx !== -1) { 
+                users[userIdx].lastLogin = new Date().toISOString(); 
+                localStorage.setItem('adaUsers', JSON.stringify(users)); 
+            }
+            
+            // Track login analytics
+            const analytics = JSON.parse(localStorage.getItem('adaAnalytics')) || { logins: [], pageViews: [], interactions: [] };
+            analytics.logins.push({ userId: user.id, username: user.username, timestamp: new Date().toISOString(), userAgent: navigator.userAgent });
+            localStorage.setItem('adaAnalytics', JSON.stringify(analytics));
+            
+            // Log activity
+            const activity = JSON.parse(localStorage.getItem('adaActivityLog')) || [];
+            activity.unshift({ id: 'act_' + Date.now(), type: 'login', action: 'login', details: 'Logged in successfully', userId: user.id, username: user.username, timestamp: new Date().toISOString() });
+            localStorage.setItem('adaActivityLog', JSON.stringify(activity.slice(0, 500)));
+            
+            const session = { userId: user.id, username: user.username, role: user.role, expiresAt: new Date(Date.now() + (remember ? 7 * 24 : 24) * 60 * 60 * 1000).toISOString() };
+            if (remember) localStorage.setItem('adaAdminSession', JSON.stringify(session)); 
+            else sessionStorage.setItem('adaAdminSession', JSON.stringify(session));
+            
+            window.location.href = 'dashboard.html';
+        }
+
+        function handleReset(e) {
+            e.preventDefault();
+            const username = document.getElementById('reset-username').value.trim().toLowerCase();
+            const email = document.getElementById('reset-email').value.trim().toLowerCase();
+            const newPwd = document.getElementById('reset-new-password').value;
+            const confirmPwd = document.getElementById('reset-confirm-password').value;
+            
+            users = JSON.parse(localStorage.getItem('adaUsers')) || [];
+            const user = users.find(u => u.username.toLowerCase() === username && u.email.toLowerCase() === email);
+            
+            if (!user) { showAlert('reset-alert', 'No account found with these details.'); return; }
+            if (newPwd.length < 8) { showAlert('reset-alert', 'Password must be at least 8 characters.'); return; }
+            if (newPwd !== confirmPwd) { showAlert('reset-alert', 'Passwords do not match.'); return; }
+            
+            const idx = users.findIndex(u => u.id === user.id); 
+            if (idx !== -1) { 
+                users[idx].password = newPwd; 
+                localStorage.setItem('adaUsers', JSON.stringify(users)); 
+            }
+            
+            showAlert('reset-alert', 'Password reset successfully! You can now login.', 'success');
+            document.getElementById('reset-form').reset();
+            setTimeout(showLoginView, 2000);
+        }
+    </script>
+</body>
+</html>
