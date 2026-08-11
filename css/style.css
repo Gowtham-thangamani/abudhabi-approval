@@ -15461,10 +15461,10 @@ transition: all 0.5s linear;
 .hilite-title{	border:0px;	}
 
 
-.hilite-title.hilite-dark strong{color:rgba(191,191,191,0.2);}
+.hilite-title.hilite-dark strong{color:rgba(255,255,255,0.22);}
 
 
-.hilite-title strong{	display:block;	font-size:80px;	line-height:80px;color:#efefef;font-family: 'Poppins', sans-serif; font-weight:900;}
+.hilite-title strong{	display:block;	font-size:80px;	line-height:80px;color:#c9c9c9;font-family: 'Poppins', sans-serif; font-weight:900;}
 
 
 @media only screen and (max-width: 768px) {
