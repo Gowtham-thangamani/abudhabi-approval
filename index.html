@@ -87,8 +87,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Color Theme Change Css -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
-    <!-- HubSpot Form Embed -->
-    <script src="https://js-eu1.hsforms.net/forms/embed/147760905.js" defer></script>
+    <!-- HubSpot Form Embed (inline / non-iframe so our page CSS styles it) -->
+    <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
     <!-- Side Switcher Css-->
     <link rel="stylesheet" type="text/css" href="css/switcher.css">     
 
@@ -104,157 +104,253 @@
 
     <!-- 1. ORGANIZATION SCHEMA -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Abu Dhabi Approval",
-        "alternateName": ["AD Approval", "AbuDhabi Approval", "Abu Dhabi Engineering Approval", "Abu Dhabi Approvals", "ADA Approval"],
-        "url": "https://www.abudhabi-approval.com",
-        "logo": "https://www.abudhabi-approval.com/images/logo-light.png",
-        "image": "https://www.abudhabi-approval.com/images/logo-light.png",
-        "description": "Abu Dhabi Approval offers engineering, building permits, civil defense, municipality & government approval services in UAE. Fast processing, 100% success rate & best prices.",
-        "foundingDate": "2024",
-        "telephone": "+971-54-232-3854",
-        "email": "info@abudhabi-approval.com",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "17th Floor, Office 1701, Abdulla Darwish Building, C-1.E-15, Salam & Hamdan Street Junction",
-            "addressLocality": "Abu Dhabi",
-            "addressRegion": "Abu Dhabi",
-            "postalCode": "00000",
-            "addressCountry": "AE"
-        },
-        "contactPoint": [
-            {
-                "@type": "ContactPoint",
-                "telephone": "+971-54-232-3854",
-                "contactType": "customer service",
-                "areaServed": ["AE", "Abu Dhabi", "Al Ain", "Al Dhafra"],
-                "availableLanguage": ["English", "Arabic", "Hindi", "Urdu"]
-            },
-            {
-                "@type": "ContactPoint",
-                "telephone": "+971-28779490",
-                "contactType": "sales",
-                "areaServed": "AE"
-            }
-        ],
-        "sameAs": [
-            "https://www.facebook.com/people/ABU-DHABI-Approval",
-            "https://www.instagram.com/abudhabi_approval",
-            "https://www.linkedin.com/company/abu-dhabi-approvals"
-        ]
-    }
-    </script>
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Abu Dhabi Approval",
+            "alternateName": [
+                "AD Approval",
+                "AbuDhabi Approval",
+                "Abu Dhabi Engineering Approval",
+                "Abu Dhabi Approvals",
+                "ADA Approval"
+            ],
+            "url": "https://www.abudhabi-approval.com",
+            "logo": "https://www.abudhabi-approval.com/images/logo-light.png",
+            "image": "https://www.abudhabi-approval.com/images/logo-light.png",
+            "description": "Abu Dhabi Approval offers engineering, building permits, civil defense, municipality & government approval services in UAE. Fast processing, 100% success rate & best prices.",
+            "foundingDate": "2024",
+            "telephone": "+971-54-232-3854",
+            "email": "info@abudhabi-approval.com",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+971-54-232-3854",
+                    "contactType": "customer service",
+                    "areaServed": [
+                        "AE",
+                        "Abu Dhabi",
+                        "Al Ain",
+                        "Al Dhafra"
+                    ],
+                    "availableLanguage": [
+                        "English",
+                        "Arabic",
+                        "Hindi",
+                        "Urdu"
+                    ]
+                },
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+971 2 546 4741",
+                    "contactType": "sales",
+                    "areaServed": "AE"
+                }
+            ],
+            "sameAs": [
+                "https://www.facebook.com/people/ABU-DHABI-Approval",
+                "https://www.instagram.com/abudhabi_approval",
+                "https://www.linkedin.com/company/abu-dhabi-approvals"
+            ]
+        }
+        </script>
 
     <!-- 2. LOCAL BUSINESS SCHEMA -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Abu Dhabi Approval",
-        "image": "https://www.abudhabi-approval.com/images/logo-light.png",
-        "url": "https://www.abudhabi-approval.com",
-        "telephone": "+971-54-232-3854",
-        "email": "info@abudhabi-approval.com",
-        "description": "Abu Dhabi Approval Experts | ADM, DCD, ADCD, Estidama, Civil Defense, Building Permit, Engineering & Municipality Approval Services UAE. Fast, Affordable & Guaranteed.",
-        "priceRange": "$$",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "17th Floor, Office 1701, Abdulla Darwish Building, C-1.E-15, Salam & Hamdan Street Junction",
-            "addressLocality": "Abu Dhabi",
-            "addressRegion": "Abu Dhabi",
-            "postalCode": "00000",
-            "addressCountry": "AE"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "24.4870",
-            "longitude": "54.3560"
-        },
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-                "opens": "08:00",
-                "closes": "18:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Friday",
-                "opens": "08:00",
-                "closes": "12:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "09:00",
-                "closes": "17:00"
-            }
-        ],
-        "areaServed": [
-            {"@type": "City", "name": "Abu Dhabi"},
-            {"@type": "City", "name": "Al Ain"},
-            {"@type": "AdministrativeArea", "name": "Al Dhafra Region"},
-            {"@type": "Country", "name": "United Arab Emirates"}
-        ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "150",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "sameAs": [
-            "https://www.facebook.com/people/ABU-DHABI-Approval",
-            "https://www.instagram.com/abudhabi_approval",
-            "https://www.linkedin.com/company/abu-dhabi-approvals"
-        ]
-    }
-    </script>
-
-    <!-- 3. SERVICES SCHEMA -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Engineering Approval Services",
-        "provider": {
+        {
+            "@context": "https://schema.org",
             "@type": "ProfessionalService",
             "name": "Abu Dhabi Approval",
+            "image": "https://www.abudhabi-approval.com/images/logo-light.png",
             "url": "https://www.abudhabi-approval.com",
             "telephone": "+971-54-232-3854",
             "email": "info@abudhabi-approval.com",
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "17th Floor, Office 1701, Abdulla Darwish Building, C-1.E-15, Salam & Hamdan Street Junction",
-                "addressLocality": "Abu Dhabi",
-                "addressRegion": "Abu Dhabi",
-                "postalCode": "00000",
-                "addressCountry": "AE"
-            }
-        },
-        "areaServed": {"@type": "Country", "name": "United Arab Emirates"},
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Approval Services",
-            "itemListElement": [
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Abu Dhabi Municipality Approval (ADM)", "description": "Complete ADM approval services for building permits"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Civil Defense Approval (ADCD/DCD)", "description": "Fire safety and civil defense approvals"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "DMT Approval", "description": "Department of Municipalities and Transport approval"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Estidama Approval", "description": "Green building Pearl Rating certification"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ADDC Approval", "description": "Electrical connection approvals"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Al Ain Municipality Approval", "description": "Al Ain City project approvals"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Al Dhafra Municipality Approval", "description": "Al Dhafra region approvals"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "KIZAD Approval", "description": "Khalifa Industrial Zone approvals"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Building Permit Services", "description": "Fast-track building permits"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "NOC Services", "description": "No Objection Certificate processing"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ITC Approval", "description": "Integrated Transport Centre approvals"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "DOH Approval", "description": "Department of Health approvals"}}
+            "description": "Abu Dhabi Approval Experts | ADM, DCD, ADCD, Estidama, Civil Defense, Building Permit, Engineering & Municipality Approval Services UAE. Fast, Affordable & Guaranteed.",
+            "priceRange": "$$",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "24.4870",
+                "longitude": "54.3560"
+            },
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday"
+                    ],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Friday",
+                    "opens": "08:00",
+                    "closes": "12:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "09:00",
+                    "closes": "17:00"
+                }
+            ],
+            "areaServed": [
+                {
+                    "@type": "City",
+                    "name": "Abu Dhabi"
+                },
+                {
+                    "@type": "City",
+                    "name": "Al Ain"
+                },
+                {
+                    "@type": "AdministrativeArea",
+                    "name": "Al Dhafra Region"
+                },
+                {
+                    "@type": "Country",
+                    "name": "United Arab Emirates"
+                }
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "reviewCount": "150",
+                "bestRating": "5",
+                "worstRating": "1"
+            },
+            "sameAs": [
+                "https://www.facebook.com/people/ABU-DHABI-Approval",
+                "https://www.instagram.com/abudhabi_approval",
+                "https://www.linkedin.com/company/abu-dhabi-approvals"
             ]
         }
-    }
-    </script>
+        </script>
+
+    <!-- 3. SERVICES SCHEMA -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Engineering Approval Services",
+            "provider": {
+                "@type": "ProfessionalService",
+                "name": "Abu Dhabi Approval",
+                "url": "https://www.abudhabi-approval.com",
+                "telephone": "+971-54-232-3854",
+                "email": "info@abudhabi-approval.com"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "United Arab Emirates"
+            },
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Approval Services",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Abu Dhabi Municipality Approval (ADM)",
+                            "description": "Complete ADM approval services for building permits"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Civil Defense Approval (ADCD/DCD)",
+                            "description": "Fire safety and civil defense approvals"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "DMT Approval",
+                            "description": "Department of Municipalities and Transport approval"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Estidama Approval",
+                            "description": "Green building Pearl Rating certification"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "ADDC Approval",
+                            "description": "Electrical connection approvals"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Al Ain Municipality Approval",
+                            "description": "Al Ain City project approvals"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Al Dhafra Municipality Approval",
+                            "description": "Al Dhafra region approvals"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "KIZAD Approval",
+                            "description": "Khalifa Industrial Zone approvals"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "Building Permit Services",
+                            "description": "Fast-track building permits"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "NOC Services",
+                            "description": "No Objection Certificate processing"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "ITC Approval",
+                            "description": "Integrated Transport Centre approvals"
+                        }
+                    },
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "DOH Approval",
+                            "description": "Department of Health approvals"
+                        }
+                    }
+                ]
+            }
+        }
+        </script>
 
     <!-- 4. WEBSITE SCHEMA WITH SITELINKS SEARCH -->
     <script type="application/ld+json">
@@ -313,7 +409,7 @@
                 "name": "How can I contact Abu Dhabi Approval?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "You can contact Abu Dhabi Approval at +971-54-232-3854 or +971-28779490, email info@abudhabi-approval.com, or visit our office at 17th Floor, Office 1701, Abdulla Darwish Building, Salam & Hamdan Street Junction, Abu Dhabi, UAE."
+                    "text": "You can contact Abu Dhabi Approval at +971-54-232-3854 or +971 2 546 4741, email info@abudhabi-approval.com."
                 }
             }
         ]
@@ -377,15 +473,12 @@
     .wf-active *,.wf-inactive *{opacity:1;transition:opacity 0.3s}
 
     /* HubSpot Form on Dark Background (Homepage) */
-    .contact-home1-left .hs-form-frame {
-        min-height: 300px;
-        background: #fff;
-        padding: 20px;
-        border-radius: 8px;
+    .contact-home1-left #hubspotMissionForm {
+        min-height: 0;
     }
     .contact-home1-left .hs-form .hs-input {
         width: 100% !important;
-        padding: 10px 14px;
+        padding: 8px 12px;
         border: 1px solid rgba(255,255,255,0.2);
         border-radius: 0;
         background: transparent;
@@ -404,19 +497,19 @@
         color: rgba(255,255,255,0.5);
     }
     .contact-home1-left .hs-form textarea.hs-input {
-        min-height: 80px;
+        min-height: 60px;
         resize: vertical;
     }
     .contact-home1-left .hs-form fieldset {
         max-width: 100% !important;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
     .contact-home1-left .hs-form label:not(.hs-error-msg) {
         color: rgba(255,255,255,0.8);
         font-family: 'Poppins', sans-serif;
         font-size: 12px;
         font-weight: 500;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
         display: block;
     }
     .contact-home1-left .hs-form .hs-error-msgs label.hs-error-msg {
@@ -427,7 +520,8 @@
         background: #F5BF23;
         color: #000;
         border: none;
-        padding: 12px 30px;
+        margin-top: 4px;
+        padding: 10px 30px;
         font-family: 'Poppins', sans-serif;
         font-size: 14px;
         font-weight: 600;
@@ -451,13 +545,28 @@
         color: rgba(255,255,255,0.6);
         font-size: 11px;
     }
-    /* Equal-height columns: text box & image stretch to match the (tall) form.
-       Heights are synced via JS (see mission-row script) because the form is a
-       HubSpot iframe whose auto-height conflicts with flexbox equal-height. */
+    /* Equal-height columns: the form column drives the height (= its content),
+       and the text box & image stretch to match so all three align top & bottom.
+       Pure CSS flexbox stretch; the JS sync below is a fallback for the async
+       HubSpot iframe in case a browser doesn't reflow when the iframe grows. */
     @media (min-width: 992px) {
+        .mission-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+        .mission-row > [class*="col-"] {
+            display: flex;
+        }
         .mission-row .mission-left,
-        .mission-row .mission-mid {
+        .mission-row .mission-mid,
+        .mission-row .contact-home1-left {
+            width: 100%;
             margin-bottom: 0;
+        }
+        /* image has no intrinsic content height, so let flex stretch fill it */
+        .mission-row .mission-mid {
+            align-self: stretch;
         }
     }
     /* Slider layer styles */
@@ -500,52 +609,49 @@
 
     <!-- LOCAL BUSINESS SCHEMA - DAS Corporate Office -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Abu Dhabi Approval Services - DAS and Partners Engineering Consultancy",
-        "image": "https://www.abudhabi-approval.com/images/logo-light.png",
-        "url": "https://www.abudhabi-approval.com",
-        "telephone": "+971 2 877 9490",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Office 1701, 17th Floor, Abdulla Darwish Building, Hamdan Bin Mohammed St",
-            "addressLocality": "Abu Dhabi",
-            "addressRegion": "Abu Dhabi",
-            "postalCode": "00000",
-            "addressCountry": "AE"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "24.4870",
-            "longitude": "54.3560"
-        },
-        "openingHoursSpecification": [
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-                "opens": "08:00",
-                "closes": "18:00"
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Abu Dhabi Approval Services - DAS and Partners Engineering Consultancy",
+            "image": "https://www.abudhabi-approval.com/images/logo-light.png",
+            "url": "https://www.abudhabi-approval.com",
+            "telephone": "+971 2 546 4741",
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "24.4870",
+                "longitude": "54.3560"
             },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Friday",
-                "opens": "08:00",
-                "closes": "12:00"
-            },
-            {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Saturday",
-                "opens": "09:00",
-                "closes": "17:00"
-            }
-        ],
-        "sameAs": [
-            "https://www.dasandpartners.com",
-            "https://www.dasandpartnersengineering.com"
-        ]
-    }
-    </script>
+            "openingHoursSpecification": [
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday"
+                    ],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Friday",
+                    "opens": "08:00",
+                    "closes": "12:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Saturday",
+                    "opens": "09:00",
+                    "closes": "17:00"
+                }
+            ],
+            "sameAs": [
+                "https://www.dasandpartners.com",
+                "https://www.dasandpartnersengineering.com"
+            ]
+        }
+        </script>
 
 </head>
 <body>
@@ -609,14 +715,6 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="mt-icon-box-wraper center p-b30">
-                                                <div class="icon-xs m-b20 scale-in-center"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
-                                                <div class="icon-content">
-                                                    <h5 class="m-t0 font-weight-500">Address info</h5>
-                                                    <p>17th Floor, Office 1701,<br> Abdulla Darwish Building,<br> C-1.E-15, Salam & Hamdan Street Junction,<br>
-Abu Dhabi, UAE</p>
-                                                </div>
-                                            </div>
                                         </div>                                          
                                         <div class="full-social-bg">
                                               <ul>
@@ -1541,8 +1639,16 @@ Abu Dhabi, UAE</p>
                             <div class="col-lg-4 col-md-12">
                                 <div class="contact-home1-left site-bg-dark p-a30 m-b0">
                                     <h3 class="text-white m-t0"><span class="font-weight-100">Get In</span> Touch</h3>
-                                    <!-- HubSpot Form -->
-                                    <div class="hs-form-frame" data-region="eu1" data-form-id="d85d01d9-2a55-4210-985a-7bc61e600b33" data-portal-id="147760905"></div>
+                                    <!-- HubSpot Form (inline embed; styled by our CSS above) -->
+                                    <div id="hubspotMissionForm"></div>
+                                    <script>
+                                        hbspt.forms.create({
+                                            region: "eu1",
+                                            portalId: "147760905",
+                                            formId: "d85d01d9-2a55-4210-985a-7bc61e600b33",
+                                            target: "#hubspotMissionForm"
+                                        });
+                                    </script>
                                 </div>
                             </div>                            
                             
@@ -2147,7 +2253,7 @@ Abu Dhabi, UAE</p>
                             <div class="col-lg-12 col-md-12">
     
                                 <!-- TITLE START -->
-                                    <div class="section-head text-white">
+                                    <div class="section-head">
                                         <div class="mt-separator-outer separator-left">
                                             <div class="mt-separator">
                                                 <h2 class="text-uppercase sep-line-one text-heading-black"><span class="font-weight-300 site-text-primary">Our</span> Partners</h2>
@@ -2181,7 +2287,7 @@ Abu Dhabi, UAE</p>
                     <div class="section-content">
                         
                         <!-- TITLE START -->
-                        <div class="section-head text-white">
+                        <div class="section-head">
                             <div class="mt-separator-outer separator-center">
                                 <div class="mt-separator">
                                     <h2 class="text-uppercase sep-line-one text-heading-black"><span class="font-weight-300 site-text-primary">Client</span> Testimonials</h2>
@@ -2377,9 +2483,9 @@ Abu Dhabi, UAE</p>
                             <div class="widget widget_address_outer">
                                 <h4 class="widget-title">Contact Us</h4>
                                 <ul class="widget_address">
-                                    <li>17th Floor, Office 1701, Abdulla Darwish Building, C-1.E-15, Salam & Hamdan Street Junction,<br> Abu Dhabi, UAE</li>
+                                    <li dir="ltr" style="color:#ffffff;">Office 1303 & 1304, 13th Floor, Addax Tower, Reem Island, Abu Dhabi, UAE</li>
                                     <li><a href="mailto:info@abudhabi-approval.com" class="email-link-white">info@abudhabi-approval.com</a></li>
-                                    <li><a href="tel:028779490" class="email-link-white" dir="ltr">+971-28779490</a></li>
+                                    <li><a href="tel:+97125464741" class="email-link-white" dir="ltr">+971 2 546 4741</a></li>
                                     <li><a href="tel:0542323854" class="email-link-white" dir="ltr">+971 54 232 3854</a></li>                                   
                                   
                                 </ul>
