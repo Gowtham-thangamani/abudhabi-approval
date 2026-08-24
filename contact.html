@@ -80,7 +80,7 @@
     <!-- Color Theme Change Css -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
     <!-- HubSpot Form Embed -->
-    <script src="https://js-eu1.hsforms.net/forms/embed/147760905.js" defer></script>
+    <!-- HubSpot form embed removed: contact form now posts to the DAS central leads inbox -->
     <!-- Side Switcher Css-->
     <link rel="stylesheet" type="text/css" href="css/switcher.css">     
 
@@ -476,8 +476,40 @@
                                     </div>
                                     <p class="hubspot-form-subtitle">Fill out the form below and our team will get back to you within 24 hours.</p>
                                     <!-- TITLE END -->
-                                    <!-- HubSpot Form -->
-                                    <div class="hs-form-frame" data-region="eu1" data-form-id="d85d01d9-2a55-4210-985a-7bc61e600b33" data-portal-id="147760905"></div>
+                                    <!-- Contact form (posts to DAS central leads inbox) -->
+                                    <form class="hs-form" id="contactForm" data-das-lead data-form-type="contact">
+                                        <fieldset>
+                                            <label for="hsName">Full Name *</label>
+                                            <input class="hs-input" type="text" id="hsName" name="name" placeholder="Your name" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="hsEmail">Email Address *</label>
+                                            <input class="hs-input" type="email" id="hsEmail" name="email" placeholder="your@email.com" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="hsPhone">Phone Number *</label>
+                                            <input class="hs-input" type="tel" id="hsPhone" name="phone" placeholder="+971 XX XXX XXXX" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="hsService">Service Required</label>
+                                            <select class="hs-input" id="hsService" name="service">
+                                                <option value="">Select a service</option>
+                                                <option>Abu Dhabi Municipality Approval</option>
+                                                <option>Civil Defence Approval</option>
+                                                <option>ADDC Approval</option>
+                                                <option>ADAFSA Approval</option>
+                                                <option>Building Completion Certificate</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="hsMessage">Your Message *</label>
+                                            <textarea class="hs-input" id="hsMessage" name="message" placeholder="Tell us about your project..." required></textarea>
+                                        </fieldset>
+                                        <div class="hs-submit">
+                                            <button type="submit" class="hs-button">Send Message</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>                        
                             <div class="col-lg-4 col-md-12">
@@ -757,5 +789,8 @@
 
 <a href="tel:0542323854" id="call-click" style="z-index:99999999; position: fixed; bottom: 30px; background-color: #fff; border-radius:25px; right: 30px;" aria-label="Call us"><img src="call.png" style="margin:5px; height:40px; width:40px;" alt="Call"></a>
 
+<!-- DAS Central Leads -->
+<script>window.DAS_LEADS_ENDPOINT='https://www.dasandpartnersengineering.com/leads/api/submit.php';window.DAS_LEADS_SITE='abudhabi-approval';</script>
+<script src="/leads.js" defer></script>
 </body>
 </html>

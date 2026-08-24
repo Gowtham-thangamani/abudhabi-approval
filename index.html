@@ -88,7 +88,7 @@
     <!-- Color Theme Change Css -->
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-1.css">
     <!-- HubSpot Form Embed (inline / non-iframe so our page CSS styles it) -->
-    <script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
+    <!-- HubSpot form embed removed: home contact form now posts to the DAS central leads inbox -->
     <!-- Side Switcher Css-->
     <link rel="stylesheet" type="text/css" href="css/switcher.css">     
 
@@ -1639,16 +1639,28 @@
                             <div class="col-lg-4 col-md-12">
                                 <div class="contact-home1-left site-bg-dark p-a30 m-b0">
                                     <h3 class="text-white m-t0"><span class="font-weight-100">Get In</span> Touch</h3>
-                                    <!-- HubSpot Form (inline embed; styled by our CSS above) -->
-                                    <div id="hubspotMissionForm"></div>
-                                    <script>
-                                        hbspt.forms.create({
-                                            region: "eu1",
-                                            portalId: "147760905",
-                                            formId: "d85d01d9-2a55-4210-985a-7bc61e600b33",
-                                            target: "#hubspotMissionForm"
-                                        });
-                                    </script>
+                                    <!-- Contact form (posts to DAS central leads inbox) -->
+                                    <form class="hs-form" id="contactFormHome" data-das-lead data-form-type="contact">
+                                        <fieldset>
+                                            <label for="hmName">Full Name *</label>
+                                            <input class="hs-input" type="text" id="hmName" name="name" placeholder="Your name" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="hmEmail">Email Address *</label>
+                                            <input class="hs-input" type="email" id="hmEmail" name="email" placeholder="your@email.com" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="hmPhone">Phone Number *</label>
+                                            <input class="hs-input" type="tel" id="hmPhone" name="phone" placeholder="+971 XX XXX XXXX" required>
+                                        </fieldset>
+                                        <fieldset>
+                                            <label for="hmMessage">Your Message *</label>
+                                            <textarea class="hs-input" id="hmMessage" name="message" placeholder="How can we help?" required></textarea>
+                                        </fieldset>
+                                        <div class="hs-submit">
+                                            <button type="submit" class="hs-button">Send Message</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>                            
                             
@@ -2674,5 +2686,8 @@
     if (window.ResizeObserver) new ResizeObserver(sync).observe(form);
 })();
 </script>
+<!-- DAS Central Leads -->
+<script>window.DAS_LEADS_ENDPOINT='https://www.dasandpartnersengineering.com/leads/api/submit.php';window.DAS_LEADS_SITE='abudhabi-approval';</script>
+<script src="/leads.js" defer></script>
 </body>
 </html>
